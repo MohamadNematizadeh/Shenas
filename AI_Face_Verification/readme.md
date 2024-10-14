@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/MohamadNematizadeh/website_PlantsAI">
-<img src="logo_no_name.png" alt="Logo"  height="100">
+<img src="https://github.com/MohamadNematizadeh/Shenas/blob/main/logo/logo_no_name.png?raw=true" alt="Logo"  height="100">
   </a>
   <h2 align="center"> 
 AI_Face_Verification </h2>
