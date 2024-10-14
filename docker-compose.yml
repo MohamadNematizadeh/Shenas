@@ -1,0 +1,56 @@
+
+version: '3.8'
+
+services:
+  flask-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/mydatabase
+
+  vite-frontend:
+    build:
+      context: ./Frontend/vite-project
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+  streamlit-frontend:
+    build:
+      context: ./Frontend/streamlit
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+
+  # ai_face_verification:
+  #   build:
+  #     context: ./AI_Face_Verification
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "6000:6000"
+
+  # ai_audio_recognition:
+  #   build:
+  #     context: ./AI_Audio_Recognition
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "6001:6001"
+
+  # ai_hand_detection:
+  #   build:
+  #     context: ./AI_Hand_Detection
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "6002:6002"
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+

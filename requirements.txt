@@ -1,0 +1,9 @@
+fastapi[standard]
+uvicorn
+streamlit
+celery
+pymongo 
+redis
+SpeechRecognition
+pydub
+mediapipe

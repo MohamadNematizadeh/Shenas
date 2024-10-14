@@ -1,0 +1,9 @@
+FROM python
+
+WORKDIR /app
+
+COPY ./Frontend/vite-project  /app
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD ["npm", "run", "dev", "--server.port", "8501", "--server.address", "0.0.0.0"]
