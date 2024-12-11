@@ -16,9 +16,9 @@ AI_Audio_recgntiton </h2>
 ```
 pip install -r requirements.txt
 ```
-
 ## How to run:
 run fastAPI in file src.app
 ```
-uvicorn src.app:app
+uvicorn main:app -port 8080
 ```
+
