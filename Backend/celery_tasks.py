@@ -30,7 +30,11 @@ def speech_task(speech_data: bytes):
 
 @celery_app.task
 def gesture_task(gesture_data: bytes):
-    response = requests.post("http://127.0.0.1:8080/auth/gesture")
+    
+    files=[
+        ('file',('th.jpg',gesture_data,'image/jpeg'))
+        ]
+    response = requests.post("http://127.0.0.1:8080/auth/gesture",files=files)
     result = response.json()
     return {"status": "completed",
             "result": result}
